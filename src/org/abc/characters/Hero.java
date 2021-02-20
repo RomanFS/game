@@ -4,7 +4,7 @@ public class Hero {
     private int lvl = 1;
     private double hp = 400 * (lvl * 0.5);
     private double mp = 100;
-    private double damage = 15 * (lvl * 0.7);
+    private double damage = 30 * (lvl * 0.7);
 
     void move() {
 
@@ -17,6 +17,12 @@ public class Hero {
 
     public void heal() {
         System.out.println("Hero: heal");
+        hp += (lvl * 0.7) * 50;
+        mp -= 25;
+    }
+
+    public double getMp() {
+        return mp;
     }
 
     public double getHp() {

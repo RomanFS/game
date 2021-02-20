@@ -4,7 +4,7 @@ public class Zombie {
     int lvl = 1;
     double hp = 250 * (lvl * 0.5);
     double mp = 50;
-    private double damage = 10 * (lvl * 0.7);
+    private double damage = 30 * (lvl * 0.7);
 
     public void move() {
 

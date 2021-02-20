@@ -58,14 +58,16 @@ public class Main {
     }
 
     void useStep() {
-        int option = selectOption();
+        matchOption(selectOption());
+    }
 
+    void matchOption(int option) {
         switch (option) {
             case 0: endGame();
                 break;
             case 1: hero.attack(zombie);
                 break;
-            case 2: hero.heal();
+            case 2: if (hero.getMp() > 0) hero.heal(); else matchOption(selectOption()); ;
                 break;
         }
     }
