@@ -17,8 +17,8 @@ public class Main {
     }
 
     void initGame() {
-        hero = new Hero();
-        zombie = new Zombie();
+        hero = new Hero(1, 200, 100, 25);
+        zombie = new Zombie(1, 200, 100, 25);
 
         System.out.println("GAME START");
 
